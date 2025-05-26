@@ -17,7 +17,7 @@ import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useMousePosition = () => {
     const [innerWidth, setInnerWidth] = useState(1);
