@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
-import { faP, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const SectionBorder = (
     props: { borderTop: boolean } & HTMLAttributes<HTMLDivElement>

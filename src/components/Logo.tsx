@@ -2,7 +2,6 @@ import React from "react";
 import logoImage from "@/assets/images/sphereal-logo.png";
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 
 const Logo = (props: HTMLAttributes<HTMLDivElement>) => {
     const { className, style, ...otherProps } = props;
