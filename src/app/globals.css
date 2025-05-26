@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --color-violet-400: #a78bfa; /* Tailwind violet-400 */
+    --color-fuchsia-400: #e879f9; /* Tailwind fuchsia-400 */
+    --color-fuchsia-900: #701a75;
+    --color-amber-300: #fcd34d; /* Tailwind amber-300 */
+
+    --color-teal-300: #5eead4;
+    --color-gray-950: oklch(0.129 0.042 264.695);
+    --color-indigo-900: #312e81;
+
+    --color-border: var(--color-gray-10);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    /* --color-gray-950:var(--color-gray-950) */
+    --color-gray-950: oklch(0.129 0.042 264.695);
+
+    --color-violet-400: var(--color-violet-400);
+    --color-fuchsia-409: var(--color-fuchsia-400);
+    --color-amber-300: var(--color-amber-300);
+    --color-teal-300: var(--color-teal-300);
+
+    /* --gap-18: "4.5rem";
+    --inset-18: "4.5rem";
+    --height-18: "4.5rem";
+    --padding-18: "4.5rem";
+    --rotate-135: "135deg";
+    */
+}
+
+@theme {
+    --animate-cursor-blink: cursor-blink 1s steps(1,start) infinite;
+
+    @keyframes cursor-blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    @media (min-width: 1024px) {
+        padding-inline: 2rem;
+    }
+}
+
+/* 
+@custom-variant gap{
+    18:'4.5rem'
+} */
+
+.absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 isolate;
+}
+
+.border-gradient {
+    @apply border-2 border-transparent [background:linear-gradient(var(--color-gray-950),var(--color-gray-950))padding-box,conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-teal-300),var(--color-violet-400))_border-box];
 }
