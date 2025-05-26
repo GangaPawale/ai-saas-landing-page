@@ -9,7 +9,6 @@ import CelestialLogo from "@/assets/images/celestial-logo.svg";
 import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export const companies = [
     {
