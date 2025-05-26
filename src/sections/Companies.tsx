@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import AcmeCorpLogo from "@/assets/images/acme-corp-logo.svg";
 import EchoValleyLogo from "@/assets/images/echo-valley-logo.svg";
@@ -47,18 +47,18 @@ const Companies = () => {
                             Empowering creators at leading companies
                         </h2>
                         <div className="flex mt-20   overflow-x-clip -mx-4 lg:-mx-8 ">
-                            <motion.div className="flex flex-none gap-18 md:gap-36 px-9 md:px-18"
-                            
-                            initial={{x:'0%'}}
-                            animate={{x:"-50%"}}
-                            transition={{
-                                duration:10,
-                                repeat:Infinity,
-                                ease:"linear"
-                            }}
+                            <motion.div
+                                className="flex flex-none gap-18 md:gap-36 px-9 md:px-18"
+                                initial={{ x: "0%" }}
+                                animate={{ x: "-50%" }}
+                                transition={{
+                                    duration: 10,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
                             >
                                 {[...companies, ...companies].map(
-                                    ({ Logo, name }, arrIndex) => (
+                                    ({ Logo }, arrIndex) => (
                                         <div key={arrIndex}>
                                             <Logo className="h-8" />
                                         </div>
