@@ -3,13 +3,9 @@ import React, { useState } from "react";
 import Ganga from "@/assets/images/ganga.jpg";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
-import AshwinSantiago from "@/assets/images/ashwin-santiago.jpg";
 import Suraj from "@/assets/images/suraj.jpg";
 import Gopal from "@/assets/images/Gopal.png";
 import Jaga from "@/assets/images/Jaga.png";
-import AlecWhitten from "@/assets/images/alec-whitten.jpg";
-import ReneWells from "@/assets/images/rene-wells.jpg";
-import MollieHall from "@/assets/images/mollie-hall.jpg";
 import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
 import Image from "next/image";
