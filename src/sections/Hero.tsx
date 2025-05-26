@@ -3,7 +3,6 @@
 import {
     motion,
     useMotionValue,
-    useMotionValueEvent,
     useScroll,
     useSpring,
     useTransform,
@@ -26,10 +25,6 @@ export const useMousePosition = () => {
     const clientY = useMotionValue(0);
     const xProgress = useTransform(clientX, [0, innerWidth], [0, 1]);
     const yProgress = useTransform(clientY, [0, innerHeight], [0, 1]);
-
-    useMotionValueEvent(clientX, "change", (latest) => {
-        console.log("clientX", latest);
-    });
 
     useEffect(() => {
         setInnerHeight(window.innerHeight);
